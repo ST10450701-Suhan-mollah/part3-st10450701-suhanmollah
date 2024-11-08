@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Game Shop - Home</title>
+    <meta name="description" content="Ultimate Game Shop - Download your favorite games with ease.">
+    <meta name="keywords" content="Ultimate Game Shop, download games, game bundles, customer support, gaming community">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Ultimate Game Shop</h1>
+        <p><strong>Slogan:</strong> Game On: Your Ultimate Download Destination</p>
+    </header>
+
+    <!-- Navigation Links -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="news.html">News</a>
+        <a href="products.html">Products & Services</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Summary Section -->
+        <section>
+            <h2>Welcome to Ultimate Game Shop</h2>
+            <p>The Ultimate Game Shop makes it easy to find and download games. We have a wide range of digital games, from new releases to top-rated titles. Enjoy special bundles for more games at a lower price, with fast and secure downloads. Our support team is always here to help, and we provide personalized game suggestions. Join our community to share reviews and talk about your favorite games. Whether you're a casual player or a serious gamer, we have everything you need. Game On!</p>
+        </section>
+
+        <!-- Image Section -->
+        <section>
+            <img width="350" src="img/GOOD.png" alt="Ultimate Game Shop Logo">
+            <img width="300" src="img/1000_F_442215355_AjiR6ogucq3vPzjFAAEfwbPXYGqYVAap.jpg" alt="Game Shop">
+        </section>
+
+        <!-- Contact Form with JavaScript Validation -->
+        <section id="contact-form">
+            <h2>Contact Us</h2>
+            <form action="mailto:example@ultimate-gameshop.com" method="post" enctype="text/plain" onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" aria-required="true" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" aria-required="true" required>
+
+                <label for="enquiry">Enquiry:</label>
+                <textarea id="enquiry" name="enquiry" placeholder="What is your enquiry about?" aria-required="true" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Newsletter Signup (Google Form) -->
+    <footer>
+        <h3>Subscribe to Our Newsletter</h3>
+        <p>Stay updated with our latest games and offers!</p>
+        <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <p>&copy; 2024 Ultimate Game Shop. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Form Validation -->
+    <script>
+        function clearField(field) {
+            if (field.defaultValue === field.value) {
+                field.value = "";
+            }
+        }
+
+        function validateForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+
+            if (!name || !email) {
+                alert("Please fill out both the name and email fields.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
